@@ -10,14 +10,14 @@
   </div>
 </template>
 
-<style lang="scss">
+<style scoped>
 .main {
   flex-direction: column;
   margin-inline: auto;
 }
 
 .content {
-  width: $content-width;
+  width: var(--content-width);
   margin-inline: auto;
   margin-block: 140px;
 }

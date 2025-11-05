@@ -29,7 +29,7 @@ const props = defineProps<Props>()
     </div>
 </template>
 
-<style lang="scss">
+<style scoped>
 .card {
     cursor: pointer;
 
@@ -42,34 +42,33 @@ const props = defineProps<Props>()
             opacity: 1;
         }
     }
+}
 
-    &__content {
-        transition: .2s;
-        transform: translateY(0px);
-    }
+.card__content {
+    transition: .2s;
+    transform: translateY(0px);
+}
 
-    &__image-wrapper {
-        width: 280px;
-        height: 280px;
-        margin-bottom: 24px;
-    }
+.card__image-wrapper {
+    width: 280px;
+    height: 280px;
+    margin-bottom: 24px;
+}
 
-    &__preview {
-        font-size: 20px;
-        line-height: 120%;
-        height: 74px;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        overflow: hidden;
-        -webkit-box-orient: vertical;
-    }
+.card__preview {
+    font-size: 20px;
+    line-height: 120%;
+    height: 74px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+}
 
-    &__more {
-        transition: .2s;
-        margin-top: 24px;
-        opacity: 0;
-        font-size: 20px;
-        color: $purple;
-    }
+.card__more {
+    transition: .2s;
+    opacity: 0;
+    font-size: 20px;
+    color: var(--purple);
 }
 </style>

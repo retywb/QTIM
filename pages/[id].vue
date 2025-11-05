@@ -26,22 +26,22 @@ const { data } = await useAsyncData('post', (): Promise<Post> => $fetch(`/api/po
     </div>
 </template>
 
-<style lang="scss">
+<style scoped>
 .post {
     display: flex;
     flex-direction: column;
     gap: 80px;
+}
 
-    &__description {
-        display: flex;
-        flex-direction: column;
-        gap: 32px;
-        width: 695px;
-    }
+.post__description {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 695px;
+}
 
-    &__image {
-        height: 700px;
-        width: 100%;
-    }
+.post__image {
+    height: 700px;
+    width: 100%;
 }
 </style>

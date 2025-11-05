@@ -103,95 +103,101 @@ const socialLinksRight = [
     </div>
 </template>
 
-<style lang="scss">
+<style scoped>
 .footer {
+    margin-top: auto;
     position: relative;
     overflow-y: hidden;
     padding-top: 140px;
     height: 900px;
-    background-color: $purple;
+    background-color: var(--purple);
     display: flex;
     justify-content: center;
+}
 
-    &__content {
-        width: $content-width;
+.footer__content {
+    width: var(--content-width);
+}
+
+.footer__there {
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 1%;
+    margin-bottom: 56px;
+}
+
+.footer__about {
+    width: 504px;
+    font-size: 112px;
+    line-height: 100%;
+}
+
+.footer__info {
+    display: flex;
+    gap: 360px;
+}
+
+.footer__contacts {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+
+    a {
+        display: block;
     }
+}
 
-    &__there {
-        font-size: 16px;
-        line-height: 120%;
-        letter-spacing: 1%;
-        margin-bottom: 56px;
-    }
+.footer__contact {
+    width: 160px;
+}
 
-    &__about {
-        width: 504px;
-        font-size: 112px;
-        line-height: 100%;
-    }
+.footer__contact-icon {
+    margin-top: 8px;
+    width: 32px;
+    height: 32px;
+}
 
-    &__info {
+.footer__contact-title {
+    margin-bottom: 12px;
+}
+
+.footer__links {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: inherit;
+
+    div {
         display: flex;
-        gap: 360px;
-    }
+        gap: 32px;
 
-    &__contacts {
-        font-size: 16px;
-        display: flex;
-        flex-direction: column;
-        gap: 36px;
-    }
-    
-    &__contact {
-        width: 160px;
-    }
-    
-    &__contact-icon {
-        margin-top: 8px;
-        width: 32px;
-        height: 32px;
-    }
-
-    &__contact-title {
-        margin-bottom: 12px;
-    }
-
-    &__links {
-        position: absolute;
-        bottom: 0;
-        padding-bottom: 30px;
-        display: flex;
-        justify-content: space-between;
-        width: inherit;
-
-        div {
-            display: flex;
-            gap: 32px;
-
-            a {
-                color: $text-color;
-            }
+        a {
+            color: var(--text-color);
+            text-decoration: underline;
         }
     }
+}
 
-    &__circle {
-        position: absolute;
-        background: $black;
-        transform: translate(-50%);
-        left: 50%;
-        width: 358px;
-        height: 358px;
-        border-radius: 50%;
-        bottom: -180px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        &::after {
-            content: 'Go';
-            font-size: 32px;
-            color: $white;
-            transform: translateY(-40px);
-        }
+.footer__circle {
+    position: absolute;
+    background: var(--black);
+    transform: translate(-50%);
+    left: 50%;
+    width: 358px;
+    height: 358px;
+    border-radius: 50%;
+    bottom: -180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::after {
+        content: 'Go';
+        font-size: 32px;
+        color: var(--white);
+        transform: translateY(-40px);
     }
 }
 </style>

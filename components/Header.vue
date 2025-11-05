@@ -1,5 +1,6 @@
 <template>
     <div class="header">
+        <div class="header__content">
         <nuxt-link to="/">
             <Icon name="logo" view-box="-1 0 86 27" class="header__logo"/>
         </nuxt-link>
@@ -27,77 +28,87 @@
             </div>
         </div>
     </div>
+    </div>
 </template>
 
-<style scoped lang="scss">
+<style scoped>
 .header {
-    width: $header-width;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--white);
+}
+
+.header__content {
     height: 121px;
+    width: var(--header-width);
     margin-inline: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
 
-    &__logo {
-        width: 84px;
-        height: 25px;
-    }
+.header__logo {
+    width: 84px;
+    height: 25px;
+}
 
-    &__united-kingdom {
-        width: 24px;
-        height: 24px;
-    }
+.header__united-kingdom {
+    width: 24px;
+    height: 24px;
+}
 
-    &__navigation {
-        display: flex;
-        align-items: center;
-        gap: 90px;
-    }
+.header__navigation {
+    display: flex;
+    align-items: center;
+    gap: 90px;
+}
 
-    &__menu {
-        display: flex;
-        gap: 51px;
+.header__menu {
+    display: flex;
+    gap: 51px;
 
-        div {
-            font-size: 20px;
-
-            &:hover {
-                cursor: pointer;
-                text-decoration: underline;
-            }
-        }
-    }
-
-    &__controls {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-    }
-
-    &__lang {
-        width: 52px;
-        height: 52px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        border: 2px solid $button-color;
-        cursor: pointer;
+    div {
+        font-size: 20px;
 
         &:hover {
-            background: $button-color-hover;
+            cursor: pointer;
+            text-decoration: underline;
         }
     }
+}
 
-    &__button {
-        padding: 16px 32px;
-        color: $white;
-        background: $button-color-active;
-        border-radius: 99px;
-        cursor: pointer;
-        text-decoration: none;
-        font-size: 20px;
-        font-weight: 400;
+.header__controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header__lang {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid var(--button-color);
+    cursor: pointer;
+
+    &:hover {
+        background: var(--button-color-hover);
     }
+}
+
+.header__button {
+    padding: 16px 32px;
+    color: var(--white);
+    background: var(--button-color-active);
+    border-radius: 99px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
 }
 </style>

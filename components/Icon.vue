@@ -10,7 +10,7 @@ const iconUrl = computed(() => `/icons/${props.name}.svg`)
     </svg>
 </template>
   
-<style lang="scss">
+<style scoped>
 .p-icon {
     flex-shrink: 0;
     fill: currentColor;

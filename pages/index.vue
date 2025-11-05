@@ -38,7 +38,7 @@ const posts = computed(() => {
     </div>
 </template>
 
-<style lang="scss">
+<style scoped>
 .main {
     display: flex;
     flex-direction: column;

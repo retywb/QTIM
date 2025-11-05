@@ -4,13 +4,5 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/image'
   ],
-  vite: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          additionalData: '@import "~/assets/main.scss";'
-        }
-      }
-    }
-  }
+  css: ['~/assets/main.css'],
 })

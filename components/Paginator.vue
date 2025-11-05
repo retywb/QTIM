@@ -91,49 +91,49 @@ function prevPage() {
   </div>
 </template>
 
-<style scoped lang="scss">
+<style scoped>
 .pagination {
   display: flex;
   align-items: center;
   gap: 8px;
   user-select: none;
+}
 
-  .pagination__button {
-    position: relative;
-    width: 44px;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: $text-color;
-    cursor: pointer;
-    background: $button-color;
-    border-radius: 12px;
-    overflow: hidden;
-    font-size: 18px;
+.pagination__button {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  cursor: pointer;
+  background: var(--button-color);
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 18px;
 
-    &:hover {
-      background: $button-color-hover;
-    }
-
-    &--next, &--prev {
-      border: 2px solid $button-color;
-      background: $white;
-    }
-
-    &-icon {
-      height: 24px;
-    }
-
-    &--prev {
-      transform: rotateZ(-180deg);
-    }
-
-    &--active {
-      background: $button-color-active;
-      color: $white;
-      pointer-events: none;
-    }
+  &:hover {
+    background: var(--button-color-hover);
   }
+}
+
+.pagination__button--next, .pagination__button--prev {
+  border: 2px solid var(--button-color);
+  background: var(--white);
+}
+
+.pagination__button-icon {
+  height: 24px;
+}
+
+.pagination__button--prev {
+  transform: rotateZ(-180deg);
+}
+
+.pagination__button--active {
+  background: var(--button-color-active);
+  color: var(--white);
+  pointer-events: none;
 }
 </style>
